@@ -1,4 +1,4 @@
-back to [home](home)/[models](models)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)
 
 ---
 
@@ -25,4 +25,4 @@ Model/Stable/Boussinesq/Sphere/Model3/:
 
 ---
 
-back to [home](home)/[models](models)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)
