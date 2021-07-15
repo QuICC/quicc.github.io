@@ -29,7 +29,7 @@ cd QuICC
 ```
 git submodule init
 git submodule update
-
+```
 
 5. Read about the code in the [tutorial](tutorial)
 

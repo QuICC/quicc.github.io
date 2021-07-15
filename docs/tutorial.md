@@ -22,6 +22,8 @@ back to [home](home)
 
 # [Geometries](tutorial-geometries)
 
+# [Models](tutorial-models)
+
 # [Options](tutorial-options)
 
 back to [home](home)
