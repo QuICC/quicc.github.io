@@ -4,17 +4,17 @@ back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)
 
 # Boussinesq models
 
-### [Plane layer](models-boussinesq-plane)
+### [Plane layer](boussinesq/models-boussinesq-plane)
 
-### [Periodic pipe](models-boussinesq-pipe)
+### [Periodic pipe](boussinesq/models-boussinesq-pipe)
 
-### [Spherical shell](models-boussinesq-shell)
+### [Spherical shell](boussinesq/models-boussinesq-shell)
 
-### [Full sphere](models-boussinesq-sphere)
+### [Full sphere](boussinesq/models-boussinesq-sphere)
 
-### [Full cylinder](models-boussinesq-cylinder)
+### [Full cylinder](boussinesq/models-boussinesq-cylinder)
 
-### [Cartesian box](models-boussinesq-box)
+### [Cartesian box](boussinesq/models-boussinesq-box)
 
 ---
 

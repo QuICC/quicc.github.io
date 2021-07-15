@@ -1,13 +1,13 @@
-back to [home](home)/[models](models)/[boussinesq](models-boussinesq)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)/[boussines](/tutorial/models/models-boussinesq)
 
 ---
 
 # Full cylinder models
 
-### [Rayleigh Benard Convection (BoussinesqCylinderRBC)](models-boussinesq-cylinder-rbc)
+### [Rayleigh Benard Convection (BoussinesqCylinderRBC)](cylinder/models-boussinesq-cylinder-rbc)
 
-### [Rotating Rayleigh Benard Convection (BoussinesqCylinderRRBC)](models-boussinesq-cylinder-rrbc)
+### [Rotating Rayleigh Benard Convection (BoussinesqCylinderRRBC)](cylinder/models-boussinesq-cylinder-rrbc)
 
 ---
 
-back to [home](home)/[models](models)/[boussinesq](models-boussinesq)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)/[boussines](/tutorial/models/models-boussinesq)

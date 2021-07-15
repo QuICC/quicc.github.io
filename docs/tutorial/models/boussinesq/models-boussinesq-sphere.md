@@ -1,25 +1,25 @@
-back to [home](home)/[models](models)/[boussinesq](models-boussinesq)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)/[boussines](/tutorial/models/models-boussinesq)
 
 ---
 
 # Full sphere models
 
-### [Inertial waves (BoussinesqSphereIW)](models-boussinesq-sphere-iw)
+### [Inertial waves (BoussinesqSphereIW)](sphere/models-boussinesq-sphere-iw)
 
-### [Thermal Convection (BoussinesqSphereTC)](models-boussinesq-sphere-tc)
+### [Thermal Convection (BoussinesqSphereTC)](sphere/models-boussinesq-sphere-tc)
 
-### [Rotating Thermal Convection (BoussinesqSphereRTC)](models-boussinesq-sphere-rtc)
+### [Rotating Thermal Convection (BoussinesqSphereRTC)](sphere/models-boussinesq-sphere-rtc)
 
-### [Rotating Thermal Dynamo (BoussinesqSphereDynamo)](models-boussinesq-sphere-dynamo)
+### [Rotating Thermal Dynamo (BoussinesqSphereDynamo)](sphere/models-boussinesq-sphere-dynamo)
 
-### [Precession (BoussinesqSpherePrecession)](models-boussinesq-sphere-precession)
+### [Precession (BoussinesqSpherePrecession)](sphere/models-boussinesq-sphere-precession)
 
-### [Precession Dynamo (BoussinesqSpherePrecessionDynamo)](models-boussinesq-sphere-precessiondynamo)
+### [Precession Dynamo (BoussinesqSpherePrecessionDynamo)](sphere/models-boussinesq-sphere-precessiondynamo)
 
-### [Precession and Rotating Thermal Convection (BoussinesqSpherePrecessionRTC)](models-boussinesq-sphere-precessionrtc)
+### [Precession and Rotating Thermal Convection (BoussinesqSpherePrecessionRTC)](sphere/models-boussinesq-sphere-precessionrtc)
 
-### [Precession and Rotating Thermal Convection Dynamo (BoussinesqSpherePrecessionRTCDynamo)](models-boussinesq-sphere-precessionrtcdynamo)
+### [Precession and Rotating Thermal Convection Dynamo (BoussinesqSpherePrecessionRTCDynamo)](sphere/models-boussinesq-sphere-precessionrtcdynamo)
 
 ---
 
-back to [home](home)/[models](models)/[boussinesq](models-boussinesq)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)/[boussines](/tutorial/models/models-boussinesq)

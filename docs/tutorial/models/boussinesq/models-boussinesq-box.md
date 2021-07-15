@@ -1,13 +1,13 @@
-back to [home](home)/[models](models)/[boussinesq](models-boussinesq)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)/[boussines](/tutorial/models/models-boussinesq)
 
 ---
 
 # Cartesian box models
 
-### [Rayleigh Benard Convection (BoussinesqBoxRBC)](models-boussinesq-box-rbc)
+### [Rayleigh Benard Convection (BoussinesqBoxRBC)](box/models-boussinesq-box-rbc)
 
-### [Rotating Rayleigh Benard Convection (BoussinesqBoxRRBC)](models-boussinesq-box-rrbc)
+### [Rotating Rayleigh Benard Convection (BoussinesqBoxRRBC)](box/boussinesq/models-boussinesq-box-rrbc)
 
 ---
 
-back to [home](home)/[models](models)/[boussinesq](models-boussinesq)
+back to [home](/)/[tutorial](/tutorial)/[models](/tutorial/tutorial-models)/[boussines](/tutorial/models/models-boussinesq)
