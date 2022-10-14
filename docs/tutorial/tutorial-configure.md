@@ -120,8 +120,14 @@ module load intel-mkl
 module load python/3.9.5
 module load petsc
 ```
-For some reason intel-mkl prepends some problematic directories to the `$CPATH` environment. Run `export CPATH=...` to fix.
+For some reason intel-mkl prepends some problematic directories to the `$CPATH` environment. Run 
+
+`export CPATH=...` 
+
+to fix.
+
 4. config and compile as indicated below
+
 # Preliminary steps on Daint
 
 -  One can add following lines to your local ~/.ssh/config 
