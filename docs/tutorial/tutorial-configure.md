@@ -92,7 +92,36 @@ module load mkl
 ```
 5. config and compile as indicated below
 
+# Preliminary steps on Anvil
+After having cloned or pulled the latest version of QuICC:
 
+1. Install SuiteSparse libraries:
+    
+    a. grab the latest stable version of the libraries from, e.g., `http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.5.4.tar.gz `
+    
+    b. purge modules: `module purge`
+    
+    c. It's easiest to build SuiteSparse with the intel compiler. load the modules `intel`, `impi`, `intel-mkl` and `cmake`
+
+    d. untar the SuiteSparse repository, go in the directory and build with the following command:
+        `make MKLROOT=${RCAC_MKL_ROOT} BLAS="-L $RCAC_MKL_ROOT/lib/intel64 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -lpthread -lm" LAPACK=''`
+        that builds the code and runs through some tests.  It puts the library files in SuiteSparse/lib and include files in SuiteSparse/include.  Note that after LAPACK above, it is two single quotes with no space in between (LAPACK is coming through MKL, which is already linked in place of BLAS).
+    
+    e. purge modules: `module purge`
+2. Change the file `cmake.d/platforms/Anvil.cmake` so that the SuiteSparse is correctly linked. At the moment the file points at the libraries in `/home/x-oliver/QuICC/` : change `x-oliver` into your username.
+3. Load the following modules to compile with `gcc`:
+```
+module load cmake
+module load gcc
+module load openmpi
+module load fftw
+module load hdf5
+module load intel-mkl
+module load python/3.9.5
+module load petsc
+```
+For some reason intel-mkl prepends some problematic directories to the `$CPATH` environment. Run `export CPATH=...` to fix.
+4. config and compile as indicated below
 # Preliminary steps on Daint
 
 -  One can add following lines to your local ~/.ssh/config 
