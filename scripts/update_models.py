@@ -28,33 +28,147 @@ if not pathlib.Path('docs').is_dir():
 
 pathlib.Path(docs_dir).mkdir(parents=True, exist_ok=True)
 
-quicc_url = "git@github.com:QuICC/"
+quicc_org_url = "git@github.com:QuICC/"
 
-model_repos = [
-        "Model-BoussinesqShellTC",
-        "Model-BoussinesqShellRTC",
-        "Model-BoussinesqShellITO",
-        "Model-BoussinesqShellDynamo",
-        "Model-BoussinesqSphereTC",
-        "Model-BoussinesqSphereRTC",
-        "Model-BoussinesqSphereRDDC",
-        "Model-BoussinesqSphereITO",
-        "Model-BoussinesqSphereDynamo",
-        "Model-BoussinesqSphereRDDDynamo",
-        "Model-BoussinesqSphereInertialessDynamo",
-        "Model-BoussinesqSphereModifiedTaylor",
-        "Model-BoussinesqPlaneRBC",
-        "Model-BoussinesqPlaneRRBC"
-        ]
+yaml_filename = 'models.yml'
 
-with open(data_dir + 'models.yml', 'w') as model_yml:
-    for m in model_repos:
-        model_name = m.removeprefix('Model-')
-        yaml.dump([{'name':model_name, 'entry':f'{model_name}/model'}], model_yml)
+repo_configs = {
+        'Model-BoussinesqShellTC':{
+            'branch':'main',
+            'dirname':'BoussinesqShellTC',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqShellRTC':{
+            'branch':'main',
+            'dirname':'BoussinesqShellRTC',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqShellITO':{
+            'branch':'main',
+            'dirname':'BoussinesqShellITO',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqShellDynamo':{
+            'branch':'main',
+            'dirname':'BoussinesqShellDynamo',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereTC':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereTC',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereRTC':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereRTC',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereRDDC':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereRDDC',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereITO':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereITO',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereDynamo':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereDynamo',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereRDDDynamo':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereRDDDynamo',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereInertialessDynamo':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereInertialessDynamo',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqSphereModifiedTaylor':{
+            'branch':'main',
+            'dirname':'BoussinesqSphereModifiedTaylor',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqPlaneRBC':{
+            'branch':'main',
+            'dirname':'BoussinesqPlaneRBC',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            },
+        'Model-BoussinesqPlaneRRBC':{
+            'branch':'main',
+            'dirname':'BoussinesqPlaneRRBC',
+            'files':{
+                'Readme.md':{
+                    'page':'model',
+                    }
+                }
+            }
+        }
+
+with open(data_dir + yaml_filename, 'w') as yaml_file:
+    for reponame,repoinfo in repo_configs.items():
         with tempfile.TemporaryDirectory() as dir:
-            model = git.Repo.clone_from(quicc_url +  m, dir, depth=1, branch='main', env ={'GIT_SSH_COMMAND':ssh_cmd})
-            tree = model.head.commit.tree
-            model_dir = docs_dir + model_name
-            pathlib.Path(docs_dir + model_name).mkdir(parents=True, exist_ok=True)
-            with open(model_dir + '/model.md', 'wb') as f:
-                f.write(tree['Readme.md'].data_stream.read())
+            repo = git.Repo.clone_from(quicc_org_url + reponame, dir, depth=1, branch=repoinfo['branch'], env ={'GIT_SSH_COMMAND':ssh_cmd})
+            tree = repo.head.commit.tree
+            repo_dir = docs_dir + repoinfo['dirname'] + '/'
+            pathlib.Path(repo_dir).mkdir(parents=True, exist_ok=True)
+            for filename,info in repoinfo['files'].items():
+                yaml.dump([{'name':repoinfo['dirname'], 'entry':f'{repoinfo['dirname']}/{info['page']}'}], yaml_file)
+                with open(repo_dir + f'{info['page']}.md', 'wb') as f:
+                    f.write(tree[filename].data_stream.read())
