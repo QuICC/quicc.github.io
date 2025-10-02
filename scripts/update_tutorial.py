@@ -30,11 +30,12 @@ pathlib.Path(docs_dir).mkdir(parents=True, exist_ok=True)
 
 quicc_org_url = "git@github.com:QuICC/"
 
-yaml_filename = 'tutorial_pages.yml'
+yaml_filename = 'tutorial.yml'
 
 repo_configs = {
         'QuICC-Solver':{
             'branch':'dev',
+            'name':'Tutorial',
             'dirname':'tutorial',
             'files':{
                 'README.md':{
@@ -60,7 +61,9 @@ with open(data_dir + yaml_filename, 'w') as yaml_file:
             tree = repo.head.commit.tree
             repo_dir = docs_dir + repoinfo['dirname'] + '/'
             pathlib.Path(repo_dir).mkdir(parents=True, exist_ok=True)
+            yaml_data = [{'name':repoinfo['name'], 'dirname':repoinfo['dirname'], 'entry':repoinfo['dirname'], 'pages':list()}]
             for filename,info in repoinfo['files'].items():
-                yaml.dump([info], yaml_file)
+                yaml_data[0]['pages'].append(info)
                 with open(repo_dir + f'{info['page']}.markdown', 'wb') as f:
                     f.write(tree[filename].data_stream.read())
+            yaml.dump(yaml_data, yaml_file)
