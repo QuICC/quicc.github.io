@@ -2,6 +2,7 @@ import git
 import tempfile
 import pathlib
 import sys, getopt
+import yaml
 
 ssh_key = ''
 argv = sys.argv[1:]
@@ -20,6 +21,7 @@ for opt, arg in opts:
 
 ssh_cmd = f'ssh -i {ssh_key}'
 
+data_dir = "docs/_data/"
 docs_dir = "docs/models/"
 if not pathlib.Path('docs').is_dir():
     sys.exit("Could not find docs/ directory!")
@@ -45,11 +47,14 @@ model_repos = [
         "Model-BoussinesqPlaneRRBC"
         ]
 
-for m in model_repos:
-    with tempfile.TemporaryDirectory() as dir:
-        model = git.Repo.clone_from(quicc_url +  m, dir, depth=1, branch='main', env ={'GIT_SSH_COMMAND':ssh_cmd})
-        tree = model.head.commit.tree
-        model_dir = docs_dir + m.removeprefix('Model-')
-        pathlib.Path(docs_dir + m.removeprefix('Model-')).mkdir(parents=True, exist_ok=True)
-        with open(model_dir + '/model.md', 'wb') as f:
-            f.write(tree['Readme.md'].data_stream.read())
+with open(data_dir + 'models.yml', 'w') as model_yml:
+    for m in model_repos:
+        model_name = m.removeprefix('Model-')
+        yaml.dump([{'name':model_name, 'entry':f'{model_name}/model'}], model_yml)
+        with tempfile.TemporaryDirectory() as dir:
+            model = git.Repo.clone_from(quicc_url +  m, dir, depth=1, branch='main', env ={'GIT_SSH_COMMAND':ssh_cmd})
+            tree = model.head.commit.tree
+            model_dir = docs_dir + model_name
+            pathlib.Path(docs_dir + model_name).mkdir(parents=True, exist_ok=True)
+            with open(model_dir + '/model.md', 'wb') as f:
+                f.write(tree['Readme.md'].data_stream.read())

@@ -4,15 +4,10 @@ title: Models
 permalink: /models/
 ---
 
-# [BousinesqSphereTC](BoussinesqSphereTC/model)
+back to [home](home)
 
-# [BousinesqSphereRTC](BoussinesqSphereRTC/model)
+{% for model in site.data.models %}
+# [{{model.name}}]({{model.entry}})
+{% endfor %}
 
-# [BousinesqSphereDynamo](BoussinesqSphereDynamo/model)
-
-# [BousinesqShellTC](BoussinesqShellTC/model)
-
-# [BousinesqShellRTC](BoussinesqShellRTC/model)
-
-# [BousinesqShellDynamo](BoussinesqShellDynamo/model)
-
+back to [home](home)
