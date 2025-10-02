@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: QuICC
-#email: philippe.marti@erdw.ethz.ch
+#email: phmarti@ethz.ch
 description: >- # this means to ignore newlines until "baseurl:"
   Quasi-Inverse Convection Code
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -30,6 +30,11 @@ github_username:  quicc
 theme: minima
 plugins:
   - jekyll-feed
+
+header_pages:
+  - about.markdown
+  - models.markdown
+  - tutorial.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
