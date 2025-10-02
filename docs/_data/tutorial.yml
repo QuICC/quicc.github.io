@@ -1,5 +1,4 @@
 - dirname: tutorial
-  entry: tutorial
   name: Tutorial
   pages:
   - name: Quick start

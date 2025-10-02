@@ -1,28 +1,70 @@
-- entry: BoussinesqShellTC/model
+- dirname: BoussinesqShellTC
   name: BoussinesqShellTC
-- entry: BoussinesqShellRTC/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqShellRTC
   name: BoussinesqShellRTC
-- entry: BoussinesqShellITO/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqShellITO
   name: BoussinesqShellITO
-- entry: BoussinesqShellDynamo/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqShellDynamo
   name: BoussinesqShellDynamo
-- entry: BoussinesqSphereTC/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereTC
   name: BoussinesqSphereTC
-- entry: BoussinesqSphereRTC/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereRTC
   name: BoussinesqSphereRTC
-- entry: BoussinesqSphereRDDC/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereRDDC
   name: BoussinesqSphereRDDC
-- entry: BoussinesqSphereITO/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereITO
   name: BoussinesqSphereITO
-- entry: BoussinesqSphereDynamo/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereDynamo
   name: BoussinesqSphereDynamo
-- entry: BoussinesqSphereRDDDynamo/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereRDDDynamo
   name: BoussinesqSphereRDDDynamo
-- entry: BoussinesqSphereInertialessDynamo/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereInertialessDynamo
   name: BoussinesqSphereInertialessDynamo
-- entry: BoussinesqSphereModifiedTaylor/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqSphereModifiedTaylor
   name: BoussinesqSphereModifiedTaylor
-- entry: BoussinesqPlaneRBC/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqPlaneRBC
   name: BoussinesqPlaneRBC
-- entry: BoussinesqPlaneRRBC/model
+  pages:
+  - name: Model description
+    page: model
+- dirname: BoussinesqPlaneRRBC
   name: BoussinesqPlaneRRBC
+  pages:
+  - name: Model description
+    page: model

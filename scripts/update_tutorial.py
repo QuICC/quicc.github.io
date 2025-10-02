@@ -40,18 +40,22 @@ repo_configs = {
             'files':{
                 'README.md':{
                     'page':'quickstart', 
-                    'name':'Quick start'},
+                    'name':'Quick start',
+                    },
                 'README_clusters.md':{
                     'page':'clusters', 
-                    'name':'Clusters'},
+                    'name':'Clusters',
+                    },
                 'README_docker.md':{
                     'page':'docker', 
-                    'name':'Docker'},
+                    'name':'Docker',
+                    },
                 'README_stability.md':{
                     'page':'stability', 
-                    'name':'Stability solver'}
-                }
-            }
+                    'name':'Stability solver',
+                    },
+                },
+            },
         }
 
 with open(data_dir + yaml_filename, 'w') as yaml_file:
@@ -61,9 +65,13 @@ with open(data_dir + yaml_filename, 'w') as yaml_file:
             tree = repo.head.commit.tree
             repo_dir = docs_dir + repoinfo['dirname'] + '/'
             pathlib.Path(repo_dir).mkdir(parents=True, exist_ok=True)
-            yaml_data = [{'name':repoinfo['name'], 'dirname':repoinfo['dirname'], 'entry':repoinfo['dirname'], 'pages':list()}]
+            yaml_data = {
+                    'name':repoinfo['name'],
+                    'dirname':repoinfo['dirname'],
+                    'pages':list(),
+                    }
             for filename,info in repoinfo['files'].items():
-                yaml_data[0]['pages'].append(info)
+                yaml_data['pages'].append(info)
                 with open(repo_dir + f'{info['page']}.markdown', 'wb') as f:
                     f.write(tree[filename].data_stream.read())
-            yaml.dump(yaml_data, yaml_file)
+            yaml.dump([yaml_data], yaml_file)
