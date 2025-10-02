@@ -170,5 +170,5 @@ with open(data_dir + yaml_filename, 'w') as yaml_file:
             pathlib.Path(repo_dir).mkdir(parents=True, exist_ok=True)
             for filename,info in repoinfo['files'].items():
                 yaml.dump([{'name':repoinfo['dirname'], 'entry':f'{repoinfo['dirname']}/{info['page']}'}], yaml_file)
-                with open(repo_dir + f'{info['page']}.md', 'wb') as f:
+                with open(repo_dir + f'{info['page']}.markdown', 'wb') as f:
                     f.write(tree[filename].data_stream.read())
