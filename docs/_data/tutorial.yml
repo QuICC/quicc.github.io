@@ -9,3 +9,11 @@
     page: docker
   - name: Stability solver
     page: stability
+  - name: Full sphere geometry
+    page: sphere_geometry
+  - name: Spherical shell geometry
+    page: shell_geometry
+  - name: Cartesian geometry
+    page: cartesian_geometry
+  - name: Parameters file
+    page: parameters

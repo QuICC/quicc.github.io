@@ -4,3 +4,8 @@
 
 layout: home
 ---
+
+# Work in progress
+
+|[Full sphere](tutorial/sphere_geometry)|[Spherical shell](tutorial/shell_geometry)|[Cartesian](tutorial/cartesian_geometry)|
+|<img src="/images/sphere_example.webp" width=200/>|<img src="/images/shell_example.webp" width=200/>|<img src="/images/plane_layer_example.webp" width=200/>|

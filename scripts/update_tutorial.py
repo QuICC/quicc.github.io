@@ -34,7 +34,7 @@ yaml_filename = 'tutorial.yml'
 
 repo_configs = {
         'QuICC-Solver':{
-            'branch':'dev',
+            'branch':'update/doc',
             'name':'Tutorial',
             'dirname':'tutorial',
             'files':{
@@ -42,17 +42,33 @@ repo_configs = {
                     'page':'quickstart', 
                     'name':'Quick start',
                     },
-                'README_clusters.md':{
+                'Doc/clusters.md':{
                     'page':'clusters', 
                     'name':'Clusters',
                     },
-                'README_docker.md':{
+                'Doc/docker.md':{
                     'page':'docker', 
                     'name':'Docker',
                     },
-                'README_stability.md':{
+                'Doc/stability.md':{
                     'page':'stability', 
                     'name':'Stability solver',
+                    },
+                'Doc/sphere_geometry.md':{
+                    'page':'sphere_geometry', 
+                    'name':'Full sphere geometry',
+                    },
+                'Doc/shell_geometry.md':{
+                    'page':'shell_geometry', 
+                    'name':'Spherical shell geometry',
+                    },
+                'Doc/cartesian_geometry.md':{
+                    'page':'cartesian_geometry', 
+                    'name':'Cartesian geometry',
+                    },
+                'Doc/parameters.md':{
+                    'page':'parameters', 
+                    'name':'Parameters file',
                     },
                 },
             },
