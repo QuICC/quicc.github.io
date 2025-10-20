@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereRTC
+permalink: /models/BoussinesqSphereRTC
+usemathjax: true
+---
+
 # Boussinesq rotating thermal convection(RTC) in a full sphere
 
 The model equations are

@@ -40,7 +40,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqShellTC',
                     },
                 },
             },
@@ -51,7 +51,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqShellRTC',
                     },
                 },
             },
@@ -62,7 +62,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqShellITO',
                     },
                 },
             },
@@ -73,7 +73,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqShellDynamo',
                     }
                 }
             },
@@ -84,7 +84,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereTC',
                     },
                 },
             },
@@ -95,7 +95,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereRTC',
                     },
                 },
             },
@@ -106,7 +106,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereRDDC',
                     },
                 },
             },
@@ -117,7 +117,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereITO',
                     }
                 }
             },
@@ -128,7 +128,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereDynamo',
                     },
                 },
             },
@@ -139,7 +139,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereRDDDynamo',
                     },
                 },
             },
@@ -150,7 +150,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereInertialessDynamo',
                     },
                 },
             },
@@ -161,7 +161,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqSphereModifiedTaylor',
                     },
                 },
             },
@@ -172,7 +172,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqPlaneRBC',
                     },
                 },
             },
@@ -183,7 +183,7 @@ repo_configs = {
             'files':{
                 'Readme.md':{
                     'page':'model',
-                    'name':'Model description',
+                    'name':'BoussinesqPlaneRRBC',
                     },
                 },
             },
@@ -204,5 +204,13 @@ with open(data_dir + yaml_filename, 'w') as yaml_file:
             for filename,info in repoinfo['files'].items():
                 yaml_data['pages'].append(info)
                 with open(repo_dir + f'{info['page']}.markdown', 'wb') as f:
-                    f.write(tree[filename].data_stream.read())
+                    # jekyll header
+                    header = b'---\n'
+                    header += f'layout: page\n'.encode()
+                    header += f'title: {info['name']}\n'.encode()
+                    if info['page'] == "model":
+                        header += f'permalink: /models/{repoinfo['dirname']}\n'.encode()
+                    header += b'usemathjax: true\n'
+                    header += b'---\n\n'
+                    f.write(header + tree[filename].data_stream.read())
             yaml.dump([yaml_data], yaml_file)

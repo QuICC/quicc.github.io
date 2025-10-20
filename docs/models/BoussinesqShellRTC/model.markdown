@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqShellRTC
+permalink: /models/BoussinesqShellRTC
+usemathjax: true
+---
+
 # Boussinesq rotating thermal convection(RTC) in a spherical shell
 
 

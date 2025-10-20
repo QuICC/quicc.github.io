@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqShellITO
+permalink: /models/BoussinesqShellITO
+usemathjax: true
+---
+
 # Boussinesq inviscid torsional oscillations in a spherical shell
 
 The model equations are

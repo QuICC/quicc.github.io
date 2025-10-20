@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereModifiedTaylor
+permalink: /models/BoussinesqSphereModifiedTaylor
+usemathjax: true
+---
+
 # Boussinesq modified taylor models in a full sphere
 
 ## Linear model

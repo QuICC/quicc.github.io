@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereRDDDynamo
+permalink: /models/BoussinesqSphereRDDDynamo
+usemathjax: true
+---
+
 # Boussinesq rotating double diffusive dynamo (RDDDynamo) in a full sphere
 
 The model equations are

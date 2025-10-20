@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereDynamo
+permalink: /models/BoussinesqSphereDynamo
+usemathjax: true
+---
+
 # Boussinesq thermal dynamo in a full sphere
 
 The model equations are

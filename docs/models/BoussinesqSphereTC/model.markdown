@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereTC
+permalink: /models/BoussinesqSphereTC
+usemathjax: true
+---
+
 # Boussinesq thermal convection(TC) in a full sphere
 
 The model equations are

@@ -1,3 +1,8 @@
+---
+layout: page
+title: Stability solver
+---
+
 Linear stability solver
 =======================
 

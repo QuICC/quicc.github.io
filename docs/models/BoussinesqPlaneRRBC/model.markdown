@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqPlaneRRBC
+permalink: /models/BoussinesqPlaneRRBC
+usemathjax: true
+---
+
 # Boussinesq Rotating Rayleigh-Benard convection(RRBC) in a plane layer
 
 The model equations are

@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereRDDC
+permalink: /models/BoussinesqSphereRDDC
+usemathjax: true
+---
+
 # Boussinesq rotating double diffusive convection (RDDC) in a full sphere
 
 The model equations are

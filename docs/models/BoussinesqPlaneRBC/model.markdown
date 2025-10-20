@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqPlaneRBC
+permalink: /models/BoussinesqPlaneRBC
+usemathjax: true
+---
+
 # Boussinesq Rayleigh-Benard convection(RBC) in a plane layer
 
 The model equations are

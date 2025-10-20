@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereInertialessDynamo
+permalink: /models/BoussinesqSphereInertialessDynamo
+usemathjax: true
+---
+
 # Boussinesq thermal inertialess dynamo in a full sphere
 
 NEEDS UPDATING

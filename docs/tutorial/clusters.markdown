@@ -1,3 +1,8 @@
+---
+layout: page
+title: Clusters
+---
+
 # Piz-Daint on GPU nodes
 
 ```bash

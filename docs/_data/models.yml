@@ -1,70 +1,70 @@
 - dirname: BoussinesqShellTC
   name: BoussinesqShellTC
   pages:
-  - name: Model description
+  - name: BoussinesqShellTC
     page: model
 - dirname: BoussinesqShellRTC
   name: BoussinesqShellRTC
   pages:
-  - name: Model description
+  - name: BoussinesqShellRTC
     page: model
 - dirname: BoussinesqShellITO
   name: BoussinesqShellITO
   pages:
-  - name: Model description
+  - name: BoussinesqShellITO
     page: model
 - dirname: BoussinesqShellDynamo
   name: BoussinesqShellDynamo
   pages:
-  - name: Model description
+  - name: BoussinesqShellDynamo
     page: model
 - dirname: BoussinesqSphereTC
   name: BoussinesqSphereTC
   pages:
-  - name: Model description
+  - name: BoussinesqSphereTC
     page: model
 - dirname: BoussinesqSphereRTC
   name: BoussinesqSphereRTC
   pages:
-  - name: Model description
+  - name: BoussinesqSphereRTC
     page: model
 - dirname: BoussinesqSphereRDDC
   name: BoussinesqSphereRDDC
   pages:
-  - name: Model description
+  - name: BoussinesqSphereRDDC
     page: model
 - dirname: BoussinesqSphereITO
   name: BoussinesqSphereITO
   pages:
-  - name: Model description
+  - name: BoussinesqSphereITO
     page: model
 - dirname: BoussinesqSphereDynamo
   name: BoussinesqSphereDynamo
   pages:
-  - name: Model description
+  - name: BoussinesqSphereDynamo
     page: model
 - dirname: BoussinesqSphereRDDDynamo
   name: BoussinesqSphereRDDDynamo
   pages:
-  - name: Model description
+  - name: BoussinesqSphereRDDDynamo
     page: model
 - dirname: BoussinesqSphereInertialessDynamo
   name: BoussinesqSphereInertialessDynamo
   pages:
-  - name: Model description
+  - name: BoussinesqSphereInertialessDynamo
     page: model
 - dirname: BoussinesqSphereModifiedTaylor
   name: BoussinesqSphereModifiedTaylor
   pages:
-  - name: Model description
+  - name: BoussinesqSphereModifiedTaylor
     page: model
 - dirname: BoussinesqPlaneRBC
   name: BoussinesqPlaneRBC
   pages:
-  - name: Model description
+  - name: BoussinesqPlaneRBC
     page: model
 - dirname: BoussinesqPlaneRRBC
   name: BoussinesqPlaneRRBC
   pages:
-  - name: Model description
+  - name: BoussinesqPlaneRRBC
     page: model

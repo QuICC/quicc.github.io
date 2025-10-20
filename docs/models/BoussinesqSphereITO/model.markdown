@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqSphereITO
+permalink: /models/BoussinesqSphereITO
+usemathjax: true
+---
+
 # Boussinesq inviscid torsional oscillations in a full sphere
 
 The model equations are

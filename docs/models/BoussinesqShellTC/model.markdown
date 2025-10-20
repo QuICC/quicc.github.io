@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqShellTC
+permalink: /models/BoussinesqShellTC
+usemathjax: true
+---
+
 # Boussinesq thermal convection(TC) in a spherical shell
 
 The model equations are

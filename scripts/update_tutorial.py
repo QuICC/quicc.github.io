@@ -89,5 +89,10 @@ with open(data_dir + yaml_filename, 'w') as yaml_file:
             for filename,info in repoinfo['files'].items():
                 yaml_data['pages'].append(info)
                 with open(repo_dir + f'{info['page']}.markdown', 'wb') as f:
-                    f.write(tree[filename].data_stream.read())
+                    # jekyll header
+                    header = b'---\n'
+                    header += f'layout: page\n'.encode()
+                    header += f'title: {info['name']}\n'.encode()
+                    header += b'---\n\n'
+                    f.write(header + tree[filename].data_stream.read())
             yaml.dump([yaml_data], yaml_file)

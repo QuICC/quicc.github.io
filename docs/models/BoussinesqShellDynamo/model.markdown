@@ -1,3 +1,10 @@
+---
+layout: page
+title: BoussinesqShellDynamo
+permalink: /models/BoussinesqShellDynamo
+usemathjax: true
+---
+
 # Boussinesq thermal dynamo convection in a spherical shell
 
 The model equations are
